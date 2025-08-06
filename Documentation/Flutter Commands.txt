@@ -1,0 +1,15 @@
+Nakon kreiranja part klase da se generiše ostatak : 
+
+dart run build_runner build
+
+Provjeriti sve konektovane devices:
+
+flutter devices
+
+Pokrenuti neki od njih 
+
+flutter run -d ime-device-a
+
+Flutter CARD: 
+
+4242424242424242

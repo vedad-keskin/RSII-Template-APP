@@ -1,0 +1,20 @@
+-- RabbitMQ - cmd komanda za instaliranje RabbitMq na dockeru na portu 15672
+
+docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+user i password : guest - guest
+
+-- Kretanje preko terminala u foldere
+
+cd CallTaxi.Subscriber
+
+-- Pokretanje projekta preko terminala
+
+dotnet run 
+
+-- Pokretanje migracija
+
+dotnet ef migrations add SeedInitialData --project .\CallTaxi.Services --startup-project .\CallTaxi.WebAPI
+
+Pokretanje dockera sa imenom CallTaxi
+
+docker build -t CallTaxi .
