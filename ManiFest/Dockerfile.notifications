@@ -1,0 +1,26 @@
+﻿
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+
+WORKDIR /src
+EXPOSE 80
+EXPOSE 443
+
+
+COPY ["ManiFest.Subscriber/ManiFest.Subscriber.csproj", "ManiFest.Subscriber/"]
+RUN dotnet restore "ManiFest.Subscriber/ManiFest.Subscriber.csproj"
+
+
+COPY . .
+WORKDIR "/src/ManiFest.Subscriber"
+RUN dotnet build "ManiFest.Subscriber.csproj" -c Release -o /app/build
+
+
+FROM build AS publish
+RUN dotnet publish "ManiFest.Subscriber.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+
+ENTRYPOINT ["dotnet", "ManiFest.Subscriber.dll"]

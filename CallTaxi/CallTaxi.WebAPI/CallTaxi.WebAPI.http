@@ -1,6 +1,0 @@
-@CallTaxi.WebAPI_HostAddress = http://localhost:5130
-
-GET {{CallTaxi.WebAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

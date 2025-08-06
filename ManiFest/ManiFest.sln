@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{857DC807-04A0-4DB9-BF40-C2E9889ABE9A}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		Dockerfile.notifications = Dockerfile.notifications
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManiFest.WebAPI", "ManiFest.WebAPI\ManiFest.WebAPI.csproj", "{023FAB62-7260-4E9A-AB7B-B7EF1A49F4BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManiFest.Subscriber", "ManiFest.Subscriber\ManiFest.Subscriber.csproj", "{8A2E0974-806C-40E2-ADA9-1853B5D02710}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManiFest.Services", "ManiFest.Services\ManiFest.Services.csproj", "{D57E6544-254F-4929-B3EF-9EF94DBC60F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManiFest.Model", "ManiFest.Model\ManiFest.Model.csproj", "{A3E03789-04A6-4074-8A58-10AF3112EA49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{023FAB62-7260-4E9A-AB7B-B7EF1A49F4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023FAB62-7260-4E9A-AB7B-B7EF1A49F4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023FAB62-7260-4E9A-AB7B-B7EF1A49F4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023FAB62-7260-4E9A-AB7B-B7EF1A49F4BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A2E0974-806C-40E2-ADA9-1853B5D02710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A2E0974-806C-40E2-ADA9-1853B5D02710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A2E0974-806C-40E2-ADA9-1853B5D02710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A2E0974-806C-40E2-ADA9-1853B5D02710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57E6544-254F-4929-B3EF-9EF94DBC60F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57E6544-254F-4929-B3EF-9EF94DBC60F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57E6544-254F-4929-B3EF-9EF94DBC60F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57E6544-254F-4929-B3EF-9EF94DBC60F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3E03789-04A6-4074-8A58-10AF3112EA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E03789-04A6-4074-8A58-10AF3112EA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E03789-04A6-4074-8A58-10AF3112EA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E03789-04A6-4074-8A58-10AF3112EA49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70985692-746F-4580-9BCD-9C20A0EE8664}
+	EndGlobalSection
+EndGlobal

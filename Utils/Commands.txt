@@ -1,0 +1,7 @@
+-- Kreiranjes skripte/migracije
+
+dotnet ef migrations add SeedInitialData --project .\ManiFest.Services --startup-project .\ManiFest.WebAPI
+
+-- Pokretanje migracije
+
+update-database
