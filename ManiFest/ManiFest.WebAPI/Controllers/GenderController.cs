@@ -1,7 +1,3 @@
-using CineVibe.Model.Requests;
-using CineVibe.Model.Responses;
-using CineVibe.Model.SearchObjects;
-using CineVibe.Services.Interfaces;
 using ManiFest.Model.Requests;
 using ManiFest.Model.Responses;
 using ManiFest.Model.SearchObjects;

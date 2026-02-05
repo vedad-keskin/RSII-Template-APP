@@ -1,4 +1,4 @@
-﻿using eRent.Services.Helpers;
+using eRent.Services.Helpers;
 using ManiFest.Services.Helpers;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -107,15 +107,13 @@ namespace ManiFest.Services.Database
 
             // Seed UserRoles
             modelBuilder.Entity<UserRole>().HasData(
-                // Admin user (desktop) - Administrator role
+
+
                 new UserRole { Id = 1, UserId = 1, RoleId = 1, DateAssigned = fixedDate },
-                // Landlord 1 - Landlord role
-                // User 1 - User role
                 new UserRole { Id = 2, UserId = 2, RoleId = 2, DateAssigned = fixedDate },
-                // User 2 - User role
-                new UserRole { Id = 3, UserId = 3, RoleId = 2, DateAssigned = fixedDate },
-                // User 3 - User role
-                new UserRole { Id = 4, UserId = 4, RoleId = 2, DateAssigned = fixedDate }
+                new UserRole { Id = 3, UserId = 3, RoleId = 2, DateAssigned = fixedDate }
+
+
             );
 
             // Seed Genders
@@ -124,8 +122,50 @@ namespace ManiFest.Services.Database
                 new Gender { Id = 2, Name = "Female" }
             );
 
-      
+            // Seed Cities (30 Bosnia and Herzegovina cities)
+            modelBuilder.Entity<City>().HasData(
+                new City { Id = 1, Name = "Sarajevo" },
+                new City { Id = 2, Name = "Banja Luka" },
+                new City { Id = 3, Name = "Tuzla" },
+                new City { Id = 4, Name = "Mostar" },
+                new City { Id = 5, Name = "Zenica" },
+                new City { Id = 6, Name = "Bihać" },
+                new City { Id = 7, Name = "Prijedor" },
+                new City { Id = 8, Name = "Brčko" },
+                new City { Id = 9, Name = "Doboj" },
+                new City { Id = 10, Name = "Cazin" },
+                new City { Id = 11, Name = "Bijeljina" },
+                new City { Id = 12, Name = "Travnik" },
+                new City { Id = 13, Name = "Zvornik" },
+                new City { Id = 14, Name = "Velika Kladuša" },
+                new City { Id = 15, Name = "Gračanica" },
+                new City { Id = 16, Name = "Lukavac" },
+                new City { Id = 17, Name = "Tešanj" },
+                new City { Id = 18, Name = "Gradačac" },
+                new City { Id = 19, Name = "Visoko" },
+                new City { Id = 20, Name = "Konjic" },
+                new City { Id = 21, Name = "Živinice" },
+                new City { Id = 22, Name = "Sanski Most" },
+                new City { Id = 23, Name = "Livno" },
+                new City { Id = 24, Name = "Orašje" },
+                new City { Id = 25, Name = "Srebrenik" },
+                new City { Id = 26, Name = "Gradiška" },
+                new City { Id = 27, Name = "Kakanj" },
+                new City { Id = 28, Name = "Bugojno" },
+                new City { Id = 29, Name = "Jajce" },
+                new City { Id = 30, Name = "Trebinje" }
+            );
 
+      
+            // Seed Categories
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = 1, Name = "Music" },
+                new Category { Id = 2, Name = "Art" },
+                new Category { Id = 3, Name = "Film" },
+                new Category { Id = 4, Name = "Theater" },
+                new Category { Id = 5, Name = "Dance" },
+                new Category { Id = 6, Name = "Literature" }
+            );
 
         }
     }

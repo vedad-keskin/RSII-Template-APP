@@ -13,7 +13,7 @@ namespace ManiFest.Services.Database
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Gender> Genders { get; set; }
         public DbSet<City> Cities { get; set; }
-    
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -61,6 +61,11 @@ namespace ManiFest.Services.Database
 
             // Configure City entity
             modelBuilder.Entity<City>()
+                .HasIndex(c => c.Name)
+                .IsUnique();
+
+            // Configure Category entity
+            modelBuilder.Entity<Category>()
                 .HasIndex(c => c.Name)
                 .IsUnique();
 
